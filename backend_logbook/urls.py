@@ -20,9 +20,10 @@ from logbook_app                    import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('bitacora/create/', views.LogbookCreateView.as_view()),
-    path('bitacora/<int:user>/', views.LogbookDetailView.as_view()),
+    path('bitacora/<str:user>/', views.LogbookDetailView.as_view()),
     path('entrada/create/', views.EntryCreateView.as_view()),
-    path('entrada/<int:logbook>/', views.EntryDetailView.as_view()),
+    path('entrada/<str:logbook>/', views.EntryDetailView.as_view()),
+    path('entrada/get/<int:pk>/', views.EntrySingleDetailView.as_view()),
     path('entrada/update/<int:pk>/', views.EntryUpdateView.as_view()),
     path('entrada/remove/<int:pk>/', views.EntryDeleteView.as_view()),
 ]

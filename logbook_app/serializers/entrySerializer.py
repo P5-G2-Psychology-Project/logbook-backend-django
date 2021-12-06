@@ -10,6 +10,7 @@ class EntrySerializer(serializers.ModelSerializer):
         entry = Entry.objects.get(id=obj.id)
         return {
             'id'            : entry.id,
+            'bitacora'      : entry.logbook.username,
             'fecha'         : entry.date,
             'psicologo'     : entry.physichologist,
             'asistencia'    : entry.attendance,

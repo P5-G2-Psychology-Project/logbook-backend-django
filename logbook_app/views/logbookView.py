@@ -11,7 +11,7 @@ class LogbookDetailView(generics.ListAPIView):
 
     def get_queryset(self): #Que me lo trabaje con el propio user de django 
         user_id = self.kwargs['user']
-        return Logbook.objects.filter(user=user_id)
+        return Logbook.objects.filter(username=user_id)
 
 class LogbookCreateView(views.APIView):
     def post(self, request, *args, **kwargs):

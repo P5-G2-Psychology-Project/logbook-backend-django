@@ -12,6 +12,13 @@ class EntryDetailView(generics.ListAPIView):
         bitacora_id = self.kwargs['logbook']
         return Entry.objects.filter(logbook=bitacora_id)
 
+class EntrySingleDetailView(generics.RetrieveAPIView):
+    queryset           = Entry.objects.all()
+    serializer_class   = EntrySerializer
+
+    def get(self, request, *args, **kwargs):
+        return super().get(request, *args, **kwargs)
+
 class EntryCreateView(views.APIView):
     def post(self, request, *args, **kwargs):
         serializer = EntrySerializer(data=request.data)
