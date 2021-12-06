@@ -26,7 +26,6 @@ SECRET_KEY = 'django-insecure-1#&h^w83=3lo!3)r7&o7y44zv*0+02w_7b53cs$(nag*%^h&2=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ALLOWED_HOSTS           = ['localhost', '127.0.0.1']
-CORS_ALLOW_ALL_ORIGINS  = True
 
 # Application definition
 
@@ -98,7 +97,7 @@ WSGI_APPLICATION = 'backend_logbook.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE'        : 'django.db.backends.postgresql_psycopg2',
-        'NAME'          : 'bitacora_ms',
+        'NAME'          : 'bitac_ms',
         'USER'          : 'postgres',
         'PASSWORD'      : '123456',
         'HOST'          : 'localhost',
