@@ -1,2 +1,9 @@
 # logbook-backend-django
-Test Cases shared collections: 
+To execute the project in your machine follow the next steps:
+
+$make migrations
+
+$migrate
+
+$py manage.py run server
+
